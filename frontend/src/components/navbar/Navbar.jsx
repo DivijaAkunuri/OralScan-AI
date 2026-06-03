@@ -1,9 +1,20 @@
 import {
   Bell,
-  UserCircle2
+  UserCircle2,
+  LogOut
 } from "lucide-react";
 
 export default function Navbar() {
+
+  const user = JSON.parse(
+    localStorage.getItem("user")
+  );
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  };
+
   return (
     <nav className="bg-white border-b">
 
@@ -46,16 +57,26 @@ export default function Navbar() {
             />
 
             <div>
+
               <p className="font-medium">
-                Dr. Ramesh
+                {user?.name || "User"}
               </p>
 
               <p className="text-xs text-gray-500">
-                Oral Pathologist
+                {user?.role || "Member"}
               </p>
+
             </div>
 
           </div>
+
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+          >
+            <LogOut size={16} />
+            Logout
+          </button>
 
         </div>
 

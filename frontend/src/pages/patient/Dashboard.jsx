@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar/Navbar";
 import PatientStats from "../../components/patient/PatientStats";
 import MyReports from "../../components/patient/MyReports";
+import ImageUploader from "../../components/upload/ImageUploader";
 
 export default function PatientDashboard() {
   return (
@@ -21,6 +22,12 @@ export default function PatientDashboard() {
 
         <div className="mt-8">
           <MyReports />
+        </div>
+
+        {/* Upload Oral Image */}
+
+        <div className="mt-8">
+          <ImageUploader />
         </div>
 
       </div>

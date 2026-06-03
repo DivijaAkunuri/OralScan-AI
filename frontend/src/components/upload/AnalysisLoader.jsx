@@ -1,17 +1,23 @@
 export default function AnalysisLoader() {
   return (
-    <div className="bg-white rounded-3xl p-8">
+    <div className="bg-white rounded-2xl p-6 shadow">
 
-      <h2 className="font-bold text-xl mb-4">
-        AI Analysis Running
-      </h2>
+      <h3 className="font-semibold text-lg mb-3">
+        AI Prediction
+      </h3>
 
-      <div className="w-full bg-gray-200 rounded-full h-4">
-        <div className="bg-primary h-4 rounded-full w-[75%]" />
+      <div className="animate-pulse">
+
+        <div className="h-4 bg-gray-200 rounded mb-3"></div>
+
+        <div className="h-4 bg-gray-200 rounded mb-3"></div>
+
+        <div className="h-4 bg-gray-200 rounded"></div>
+
       </div>
 
       <p className="mt-4 text-gray-500">
-        Processing oral lesion image...
+        Waiting for image upload...
       </p>
 
     </div>
